@@ -1,0 +1,161 @@
+<div class="container mx-auto px-14">
+    <form [formGroup]="this.form">
+        <div class="space-y-12 pt-10">
+
+            <div class="border-b border-gray-900/10 pb-12">
+                <h2 class="text-base font-semibold leading-7 ">Personal Information</h2>
+                <p class="mt-1 text-sm leading-6 ">Use a permanent address where you can receive mail.</p>
+
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+
+                    <div class="sm:col-span-3 form-field">
+                        <label for="first-name" class="block text-sm font-medium leading-6 ">First name</label>
+                        <div class="mt-2">
+                            <input type="text" formControlName="firstName" name="first-name" id="first-name"
+                                autocomplete="given-name"
+                                class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <span class="err"
+                                *ngIf="this.form.get('firstName')?.touched && this.form.get('firstName')?.hasError('required')">field
+                                is required</span>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3 form-field">
+                        <label for="last-name" class="block text-sm font-medium leading-6 ">Last
+                            name (optional)</label>
+                        <div class="mt-2">
+                            <input type="text" formControlName="lastName" name="last-name" id="last-name"
+                                autocomplete="family-name"
+                                class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3 form-field">
+                        <label for="first-name" class="block text-sm font-medium leading-6 ">Date of
+                            Birth</label>
+                        <div class="mt-2">
+                            <input type="text" formControlName="dob" name="first-name" id="first-name"
+                                autocomplete="given-name"
+                                class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <span class="err"
+                                *ngIf="this.form.get('dob')?.touched && this.form.get('dob')?.hasError('required')">field
+                                is required</span>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3 form-field">
+                        <label for="last-name" class="block text-sm font-medium leading-6 ">Gender</label>
+                        <div class="mt-2 w-full">
+                            <select id="country" formControlName="gender" name="country" autocomplete="country-name"
+                                class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                            <span class="err"
+                                *ngIf="this.form.get('gender')?.touched && this.form.get('gender')?.hasError('required')">field
+                                is required</span>
+                        </div>
+
+                    </div>
+
+                    <div class="sm:col-span-3 form-field">
+                        <label for="first-name" class="block text-sm font-medium leading-6 ">Nationality</label>
+                        <div class="mt-2">
+                            <input type="text" formControlName="nationality" name="first-name" id="first-name"
+                                autocomplete="given-name"
+                                class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <span class="err"
+                                *ngIf="this.form.get('nationality')?.touched && this.form.get('nationality')?.hasError('required')">field
+                                is required</span>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3 form-field">
+                        <label for="last-name" class="block text-sm font-medium leading-6 ">Address</label>
+                        <div class="mt-2">
+                            <textarea formControlName="address" type="text" name="last-name" id="last-name"
+                                autocomplete="family-name"
+                                class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                            <span class="err"
+                                *ngIf="this.form.get('address')?.touched && this.form.get('address')?.hasError('required')">field
+                                is required</span>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3 form-field">
+                        <label for="first-name" class="block text-sm font-medium leading-6 ">City</label>
+                        <div class="mt-2">
+                            <input type="text" formControlName="city" name="first-name" id="first-name"
+                                autocomplete="given-name"
+                                class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <span class="err"
+                                *ngIf="this.form.get('city')?.touched && this.form.get('city')?.hasError('required')">field
+                                is required</span>
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3 form-field">
+                        <label for="last-name" class="block text-sm font-medium leading-6 ">State/Province
+                            (optional)</label>
+                        <div class="mt-2">
+                            <input type="text" formControlName="state" name="last-name" id="last-name"
+                                autocomplete="family-name"
+                                class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3 form-field">
+                        <label for="first-name" class="block text-sm font-medium leading-6 ">ZIP
+                            Code (optional)</label>
+                        <div class="mt-2">
+                            <input type="text" formControlName="ZIPCode" name="first-name" id="first-name"
+                                autocomplete="given-name"
+                                class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-12 w-1/2 py-10">
+            <div class="border-b border-gray-900/10 pb-12">
+
+                <div class="flex justify-between items-center">
+                    <h2 class="text-base font-semibold leading-7">Skills</h2>
+                    <div class="flex gap-4">
+                        <button (click)="addSkillRow()">
+                            <i class="fas fa-plus"></i> Add Skill
+                        </button>
+                    </div>
+                </div>
+
+                <div formArrayName="skills" *ngFor="let group of this.skills['controls'];let i = index">
+                    <div [formGroup]="group">
+                        <div class="mt-2 form-field">
+                            <div class="relative">
+                                <input type="text" formControlName="skillName" name="first-name" id="first-name"
+                                    autocomplete="given-name"
+                                    class="block w-full rounded-md border-0 py-1.5  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <button class="absolute right-3 top-[50%] translate-y-[-50%]" (click)="remove(i)">
+                                        <i class="fas fa-close"></i>
+                                    </button>
+                            </div>
+                            <span class="err"
+                                *ngIf="this.group.get('skillName')?.touched && this.form.get('firstName')?.hasError('required')">field
+                                is required</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 mb-12 flex items-center justify-end gap-x-6">
+            <button type="button" class="text-sm font-semibold leading-6 ">Cancel</button>
+            <button type="submit" (click)="onSubmit()"
+                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+        </div>
+    </form>
+</div>

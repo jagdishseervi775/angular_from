@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-gray-800;
+}
+
+input, select, textarea{
+    @apply bg-gray-700 border-gray-950 px-2;
+}
+
+p, label, h1, h2, h3, h4, h5, h6, div, spen {
+    @apply text-slate-200
+}
+
+.err{
+    @apply mt-2 text-red-600 text-xs capitalize animate-pulse
+}
+
+.form-field{
+    @apply h-20
+}
